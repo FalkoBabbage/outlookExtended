@@ -22,9 +22,9 @@ addon_info = {
 - Improve result reading in address book.
 - Vocalize mark as read/unread ctrl+q/ctrl+u commands."""),
 	# version
-	"addon_version": "1.9",
+	"addon_version": "2023.1",
 	# Author(s)
-	"addon_author": u"Cyrille Bougot <cyrille.bougot2@laposte.net>, Ralf Kefferpuetz <ralf.kefferpuetz@elra-consulting.de>",
+	"addon_author": u"Cyrille Bougot <cyrille.bougot2@laposte.net>, Ralf Kefferpuetz <ralf.kefferpuetz@elra-consulting.de>, Babbage B.V. <support@babbage.com>",
 	# URL for the add-on documentation support
 	"addon_url": "https://github.com/CyrilleB79/outlookExtended",
 	# Documentation file name

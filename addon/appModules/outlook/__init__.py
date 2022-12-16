@@ -52,7 +52,7 @@ from locationHelper import RectLTWH
 import sys
 import re
 import threading
-
+from . import improveBraille, outlookDocument
 import addonHandler
 
 addonHandler.initTranslation()
@@ -286,6 +286,8 @@ class AppModule(AppModule):
 		
 	def chooseNVDAObjectOverlayClasses(self, obj, clsList):
 		super(AppModule, self).chooseNVDAObjectOverlayClasses(obj, clsList)
+		if OutlookWordDocument in clsList:
+			clsList.insert(0, outlookDocument.DocumentSubMailNavigation)
 		if obj.role==controlTypes.Role.LISTITEM and obj.windowClassName=="OUTEXVLB":
 			clsList.insert(0, AddressBookEntry)
 			return
@@ -294,6 +296,7 @@ class AppModule(AppModule):
 			return
 		if UIAGridRow in clsList:
 			clsList.insert(0, UIAGridRowWithReadStatus)
+			clsList.insert(0, improveBraille.brailleAbbriviations)
 		if UIA in clsList and obj.role == controlTypes.Role.GROUPING:
 			clsList.insert(0,UIAWithReadStatus)
 		
